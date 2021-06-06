@@ -1,14 +1,42 @@
 # sl-web
+Javascript frontend web application spa with vuejs 
 
-## Project setup
+**Requirements:**
+- node >= `v14.17.0`
+- npm >= `7.13.0`
+
+##Project Setup (Development)
+1. Environment
+```bash
+sudo apt-get update
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+2. Clone from github
+```bash
+git clone https://github.com/Extramus/SL-Web.git
+```
+3. Go to project directory
+```bash
+cd SL-Web
+```
+4. Update and install node modules
+```bash
+npm install
+```
+5. Run local server in development mood
+```bash
+npm run serve
+```
+
+
+<hr>
+
+## Project setup (Production)
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
 ### Compiles and minifies for production
 ```

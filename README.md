@@ -1,4 +1,4 @@
-# sl-web
+# DMarketing-web
 Javascript frontend web application spa with vuejs 
 
 **Requirements:**

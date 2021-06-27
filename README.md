@@ -14,11 +14,11 @@ sudo apt-get install npm
 ```
 2. Clone from github
 ```bash
-git clone https://github.com/Extramus/SL-Web.git
+git clone https://github.com/Extramus/DMarketing-web.git
 ```
 3. Go to project directory
 ```bash
-cd SL-Web
+cd DMarketing-web
 ```
 4. Update and install node modules
 ```bash

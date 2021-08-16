@@ -55,6 +55,15 @@ const routes = [
         component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/Profile.vue')
 
       },
+      {
+        path:'account/settings',
+        name: 'settings',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/Settings.vue')
+
+      },
     ],
   },
 

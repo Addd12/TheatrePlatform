@@ -34,7 +34,7 @@
         <hr>
         <a href="#"><i class="fas fa-user-check"></i> Verify Account</a>
         <hr>
-        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <router-link :to="{name: 'settings'}" @click="closeUsermenu"><i class="fas fa-cog"></i> Settings</router-link>
         <hr>
         <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
 

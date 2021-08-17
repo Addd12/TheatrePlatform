@@ -25,7 +25,9 @@
                   <ul class="dropdown-menu">
                     <a href="#"><i class="fas fa-link"></i> Copy Link</a>
                     <hr style="margin:0px;">
-                    <a href="#"><i class="far fa-edit"></i> Edit</a>
+                    <a href="#" @click="goToEdit"><i class="far fa-edit"></i> Edit</a>
+                    <!-- <button class="far fa-edit" @click="goToEdit">Edit</button> -->
+                    <!-- <router-link :to="{name: 'crInvoice'}" @click="closeUsermenu"><i class="fas fa-file-invoice"></i>  Invoice</router-link> -->
                     <hr style="margin:0px;">
                     <a href="#"><i class="far fa-trash-alt"></i> Delete</a>
                   </ul>
@@ -96,6 +98,11 @@ export default {
     this.albumModel.push(testAlbum2);
     this.albumModel.push(testAlbum3);
   },
+   methods:{
+   goToEdit(){
+   this.$router.push('../modules/editalbum'); 
+      }
+  }
 }
 </script>
 

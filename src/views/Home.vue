@@ -34,6 +34,8 @@
         <hr>
         <a href="#"><i class="fas fa-user-check"></i> Verify Account</a>
         <hr>
+        <router-link :to="{name: 'crInvoice'}" @click="closeUsermenu"><i class="fas fa-file-invoice"></i>  Invoice</router-link>
+        <hr>
         <a href="#"><i class="fas fa-cog"></i> Settings</a>
         <hr>
         <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>

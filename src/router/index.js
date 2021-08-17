@@ -55,6 +55,27 @@ const routes = [
         component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/Profile.vue')
 
       },
+
+      {
+        path:'invoice',
+        name: 'crInvoice',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/Invoice.vue')
+
+      },
+
+      {
+        path:'editalbum',
+        name: 'crEditAlbum',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/modules/editalbum.vue')
+
+      },
+
     ],
   },
 

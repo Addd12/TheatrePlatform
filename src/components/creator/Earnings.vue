@@ -83,16 +83,6 @@
             </div>
           </fieldset>
 
-            <!-- <div class="mb-3">
-              <label class="form-label">IBAN</label>
-              <input
-                type="text"
-                id="disabledTextInput"
-                class="form-control"
-                placeholder="12345678"
-              />
-            </div> -->
-
         <div class="mb-3">
           <label class="my-1 mr-2" for="inlineFormCustomSelectPref">IBAN</label>
             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
@@ -116,7 +106,6 @@
             </div>
 
           <div class="w3-container containerbox">
-            <!-- <p>Estimated Arrival Time : <b>2 Days</b></p> -->
             <div style="overflow: hidden;">
               <p style="float: left;">Estimated Arrival Time</p>
               <b><p style="float: right;">2 Business Days</p></b>

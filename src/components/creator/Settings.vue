@@ -3,133 +3,173 @@
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10 col-xl-8 mx-auto">
             <h2 class="h3 mb-4 page-title">Edit your profile</h2>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bank-tab" data-toggle="tab" href="#bank" role="tab" aria-controls="bank" aria-selected="false">Bank account</a>
+                </li>
+            </ul>
             <div class="my-4">
                 <form>
-                    <div class="row mt-5 align-items-center">
-                        <div class="col-md-3 text-center mb-5">
-                            <div class="avatar avatar-xl">
-                                <img src="https://via.placeholder.com/150" alt="Profile picture" class="avatar-img rounded-circle" />
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="row align-items-center">
-                                <div class="col-md-7">
-                                    <h4 class="mb-1">John Doe</h4>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row mt-5 align-items-center">
+                                <div class="col-md-3 text-center mb-5">
+                                    <div class="avatar avatar-xl">
+                                        <img src="https://via.placeholder.com/150" alt="Profile picture" class="avatar-img rounded-circle" />
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-7">
+                                            <h4 class="mb-1">John Doe</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-4">
+                                        <div class="col-md-12">
+                                            <p class="text-muted" contentEditable="true">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus. In hac habitasse platea dictumst. Cras urna quam, malesuada vitae risus at,
+                                                pretium blandit sapien.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mb-4">
-                                <div class="col-md-12">
-                                    <p class="text-muted" contentEditable="true">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit nisl ullamcorper, rutrum metus in, congue lectus. In hac habitasse platea dictumst. Cras urna quam, malesuada vitae risus at,
-                                        pretium blandit sapien.
-                                    </p>
+                            <hr class="my-4" />
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" id="firstname" class="form-control" placeholder="First name" required/>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" id="lastname" class="form-control" placeholder="Last name" required/>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <button type="button" class="btn fromSubmitBtnStyle">Verify</button>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" id="username" placeholder="Username" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="privateAccount" for="privateAccount">Private account: </label>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input v-model="phone" class="form-control" placeholder="Phone number" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="showOnProfile">Show on profile: </label>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="birthday">Date of birth: </label>
+                                    <input type="date" id="birthday" name="birthday">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="iviteEmail" placeholder="Enter friend's email" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <button type="button" class="btn fromSubmitBtnStyle">Invite</button>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="url" class="form-control" id="social" placeholder="Social media link" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <button type="button" class="btn fromSubmitBtnStyle">Add +</button>
+                                </div>
+                            </div>
+                            <a class="password" href="#passwordSection" data-toggle="collapse">Change password</a>
+                            <div id="passwordSection" class="collapse">
+                                <div class="form-group">
+                                    <label for="inputPassword4">Old Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword5">New Password</label>
+                                    <input type="password" class="form-control" id="inputPassword5" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword6">Confirm Password</label>
+                                    <input type="password" class="form-control" id="inputPassword6" />
+                                </div>
+                            </div>
+                            <br>
+                            <a class="delete" href="#delPopUp" data-toggle="modal" data-target="#delModal">Delete account</a>
+                            <div id="delModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h3>Please carefully check the options below before choosing!</h3>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Temporarily disable your account</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quasi? Eos eligendi 
+                                                explicabo nemo porro ipsam possimus laboriosam labore facilis expedita molestiae quibusdam 
+                                                quos earum voluptate, atque culpa, consectetur distinctio.</p>
+                                            <button type="submit" class="btn fromSubmitBtnStyle">Disable</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h4>Permanently delete your account</h4>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quasi? Eos eligendi 
+                                                explicabo nemo porro ipsam possimus laboriosam labore facilis expedita molestiae quibusdam 
+                                                quos earum voluptate, atque culpa, consectetur distinctio.</p>
+                                            <button type="submit" class="btn fromSubmitBtnStyle">Delete</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <hr class="my-4" />
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="text" id="firstname" class="form-control" placeholder="First name" required/>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <input type="text" id="lastname" class="form-control" placeholder="Last name" required/>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn fromSubmitBtnStyle">Verify</button>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input class="form-control" id="username" placeholder="Username" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="privateAccount" for="privateAccount">Private account: </label>
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input v-model="phone" class="form-control" placeholder="Phone number" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="showOnProfile">Show on profile: </label>
-                            <label class="switch">
-                                <input type="checkbox" checked>
-                                <span class="slider round"></span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="birthday">Date of birth: </label>
-                            <input type="date" id="birthday" name="birthday">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="email" class="form-control" id="iviteEmail" placeholder="Enter friend's email" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn fromSubmitBtnStyle">Invite</button>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <input type="url" class="form-control" id="social" placeholder="Social media link" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <button type="button" class="btn fromSubmitBtnStyle">Add +</button>
-                        </div>
-                    </div>
-                    <a class="password" href="#passwordSection" data-toggle="collapse">Change password</a>
-                    <div id="passwordSection" class="collapse">
-                        <div class="form-group">
-                            <label for="inputPassword4">Old Password</label>
-                            <input type="password" class="form-control" id="inputPassword4" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword5">New Password</label>
-                            <input type="password" class="form-control" id="inputPassword5" />
-                        </div>
-                        <div class="form-group">
-                            <label for="inputPassword6">Confirm Password</label>
-                            <input type="password" class="form-control" id="inputPassword6" />
-                        </div>
-                    </div>
-                    <br>
-                    <a class="delete" href="#delPopUp" data-toggle="modal" data-target="#delModal">Delete account</a>
-                    <div id="delModal" class="modal fade" role="dialog">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3>Please carefully check the options below before choosing!</h3>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="tab-pane fade" id="bank" role="tabpanel" aria-labelledby="bank-tab">
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" id="firstname" class="form-control" placeholder="First name" required/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" id="lastname" class="form-control" placeholder="Last name" required/>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <h4>Temporarily disable your account</h4>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quasi? Eos eligendi 
-                                        explicabo nemo porro ipsam possimus laboriosam labore facilis expedita molestiae quibusdam 
-                                        quos earum voluptate, atque culpa, consectetur distinctio.</p>
-                                    <button type="submit" class="btn fromSubmitBtnStyle">Disable</button>
+                                <input type="text" id="iban" class="form-control" placeholder="IBAN" required/>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <select id="country" name="country">
+                                            <option value="Afganistan">Afghanistan</option>
+                                            <option value="Albania">Albania</option>
+                                            <option value="Algeria">Algeria</option>
+                                            <option value="American Samoa">American Samoa</option>
+                                            <option value="Andorra">Andorra</option>
+                                            <option value="Angola">Angola</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" id="swift" class="form-control" placeholder="SWIFT/BIC" required/>
+                                    </div>
                                 </div>
-                                <div class="modal-body">
-                                    <h4>Permanently delete your account</h4>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, quasi? Eos eligendi 
-                                        explicabo nemo porro ipsam possimus laboriosam labore facilis expedita molestiae quibusdam 
-                                        quos earum voluptate, atque culpa, consectetur distinctio.</p>
-                                    <button type="submit" class="btn fromSubmitBtnStyle">Delete</button>
-                                </div>
-                            </div>
-
+                                
+                            </form>
                         </div>
                     </div>
                     <hr>
@@ -151,7 +191,6 @@ export default {
   name: "Settings", 
   
 }
-
 </script>
 
 <style scoped>
@@ -220,7 +259,6 @@ img {
   -webkit-transition: .4s;
   transition: .4s;
 }
-
 .slider:before {
   position: absolute;
   content: "";

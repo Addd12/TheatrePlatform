@@ -10,7 +10,7 @@
         <div class="card">
           <div class="card-body">
             <div class="overlayAlbumstyle">
-              <img :src="album.imgsrc" class="img-thumbnail" alt="Cinque Terre">
+              <img :src="album.imgsrc" class="img-thumbnail" alt="Cinque Terre" @click="goToDetails">
               <span class="albumTitle-style">{{ album.title }}</span><br>
 
               <div class="justify-content-center contentDetails-style">
@@ -101,12 +101,21 @@ export default {
    methods:{
    goToEdit(){
    this.$router.push('../modules/editalbum'); 
-      }
+      },
+
+   goToDetails(){
+    this.$router.push('../modules/detailsPage'); 
+   }
   }
 }
 </script>
 
 <style scoped>
+
+.img-thumbnail{
+  cursor: pointer;
+}
+
 .card{
   border: 0px;
 

@@ -36,7 +36,8 @@
         <hr>
         <router-link :to="{name: 'crInvoice'}" @click="closeUsermenu"><i class="fas fa-file-invoice"></i>  Invoice</router-link>
         <hr>
-        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+        <router-link :to="{name: 'settings'}" @click="closeUsermenu"><i class="fas fa-cog"></i> Settings</router-link>
+
         <hr>
         <a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
 

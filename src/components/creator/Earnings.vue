@@ -38,7 +38,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- <router-link :to="{name: 'crWithdrawal'}" tag="button" class="btn fromSubmitBtnStyle mt-4">Withdraw Now</router-link> -->
       <!-- <div>
      <transition name="modals">
@@ -54,12 +54,6 @@
       <button @click="isOpen=!isOpen">Open modal</button>
    </div>  -->
       <div id="app">
-        <button
-          class="button withdrawnow btn fromSubmitBtnStyle mb-3"
-          @click="showModal = true"
-        >
-          Withdraw Now
-        </button>
         <transition name="fade" appear>
           <div
             class="modal-overlay"
@@ -79,7 +73,7 @@
                 type="text"
                 id="disabledTextInput"
                 class="form-control"
-                placeholder="$100"
+                placeholder="€100"
               />
             </div>
           </fieldset>
@@ -88,21 +82,21 @@
           <label class="my-1 mr-2" for="inlineFormCustomSelectPref">IBAN</label>
             <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
               <option selected>Choose...</option>
-              <option value="1">12345</option>
-              <option value="2">54321</option>
-              <option value="3">43545</option>
+              <option value="1">xxxx-xxxx-2345</option>
+              <option value="2">xxxx-xxxx-5432</option>
+              <option value="3">xxxx-xxxx-4354</option>
             </select>
 
         </div>
 
 
             <div class="mb-3">
-              <label for="disabledTextInput" class="form-label">Amount</label>
+              <label for="amount" class="form-label">Amount</label>
               <input
                 type="text"
-                id="disabledTextInput"
+                id="amount"
                 class="form-control"
-                placeholder="$50"
+                placeholder="€50"
               />
             </div>
 
@@ -120,7 +114,6 @@
           </div>
         </transition>
       </div>
-      <h4 class="mt-3">All Transactions</h4>
 
       <h4 class="mt-3">Earning Resume</h4>
       <div class="card text-center">
@@ -151,7 +144,7 @@
               <i class="fas fa-euro-sign"></i> 100
             </div>
           </div>
-          
+
         </div>
       </div>
         <br>
@@ -162,13 +155,18 @@
 
 
             <div class="col-sm-6 col-6 earningSumm-group noselect">
-              <button class="btn fromSubmitBtnStyle mt-4">Withdraw Now</button>
+              <button
+                  class="button withdrawnow btn fromSubmitBtnStyle mb-3"
+                  @click="showModal = true"
+              >
+                Withdraw Now
+              </button>
             </div>
             <div class="col-sm-4 col-6 borderDividerLeft earningSumm-group noselect">
               <button class="btn fromSubmitBtnStyle mt-4">More Statistics</button>
             </div>
           </div>
-          
+
         </div>
       </div>
       <h4 class="mt-3">Purchases Resume</h4>
@@ -300,18 +298,12 @@
 <script>
 export default {
   name: "Earnings",
-
-  data: function () {
-    return {
-      isOpen: false,
-      showModal: false,
-    };
-  },
-  
   name2: 'TableOfPurchases',
   data (){
     return {
-      purchases: []
+      isOpen: false,
+      showModal: false,
+      purchases: [],
     };
   },
 
@@ -407,7 +399,7 @@ export default {
       feedback: 'Great job'
     };
       let testPurchase10 = {
-      num: 10,        
+      num: 10,
       viewer: "A Summer Spent Seaside",
       amount: 10,
       album: "A Summer Spent Seaside",
@@ -436,9 +428,9 @@ export default {
 
 <style scoped>
 
-legend { 
-  color: black; 
-  font-size: 30px; 
+legend {
+  color: black;
+  font-size: 30px;
   font-family: 'Signika', sans-serif;
   font-weight: bold;
   text-align: center;

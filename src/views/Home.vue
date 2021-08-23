@@ -32,7 +32,7 @@
         <hr>
         <a href="#"><i class="fas fa-link"></i> Copy Profile Link</a>
         <hr>
-        <a href="#"><i class="fas fa-user-check"></i> Verify Account</a>
+        <router-link :to="{name: 'crVerification'}" @click="closeUsermenu"><i class="fas fa-user-check"></i> Verify Account</router-link>
         <hr>
         <router-link :to="{name: 'settings'}" @click="closeUsermenu"><i class="fas fa-cog"></i> Settings</router-link>
         <hr>
@@ -126,7 +126,7 @@ export default {
 #right-cart-panel{
   height: 100%;
   width: 0%;
-  z-index: 1;
+  z-index: 20;
   position: fixed;
   top: 50px;
   right: 0;

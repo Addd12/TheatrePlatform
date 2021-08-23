@@ -31,7 +31,7 @@
                   </div>
                 </div>
                 <div class="u-product-control u-product-desc u-text u-text-default u-text-2">
-                  <p>{{ album.description }}</p>
+                  <p style="padding-right: 31px;">{{ album.description }}</p>
                 </div>
                 <br>
                 <div class="u-price-wrapper u-spacing-10"> 

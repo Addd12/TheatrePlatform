@@ -40,10 +40,10 @@
                             <hr class="my-4" />
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <input type="text" id="firstname" class="form-control" placeholder="First name" required/>
+                                    <input type="text" id="firstname" v-model="first_name" class="form-control" placeholder="First name" required/>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" id="lastname" class="form-control" placeholder="Last name" required/>
+                                    <input type="text" id="lastname" v-model="last_name" class="form-control" placeholder="Last name" required/>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -59,9 +59,9 @@
                                     <input class="form-control" id="username" placeholder="Username" />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label class="privateAccount" for="privateAccount">Private account: </label>
+                                    <label for="privateAccount" class="privateAccount">Profile Visibility(Public): </label>
                                     <label class="switch">
-                                        <input type="checkbox" checked>
+                                        <input id="privateAccount" type="checkbox">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -71,7 +71,7 @@
                                     <input v-model="phone" class="form-control" placeholder="Phone number" />
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label class="showOnProfile">Show on profile: </label>
+                                    <label class="showOnProfile">Show on profile(Public): </label>
                                     <label class="switch">
                                         <input type="checkbox" checked>
                                         <span class="slider round"></span>
@@ -80,8 +80,8 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="birthday">Date of birth: </label>
-                                    <input type="date" id="birthday" name="birthday">
+                                    <label for="dObInput">Date of birth: </label>
+                                    <input type="date" id="dObInput" name="birthday" class="form-control inlineInput">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -103,16 +103,16 @@
                             <a class="password" href="#passwordSection" data-toggle="collapse">Change password</a>
                             <div id="passwordSection" class="collapse">
                                 <div class="form-group">
-                                    <label for="inputPassword4">Old Password</label>
-                                    <input type="password" class="form-control" id="inputPassword4" />
+                                    <label for="inputPassword4">Current Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" autocomplete="off" />
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword5">New Password</label>
-                                    <input type="password" class="form-control" id="inputPassword5" />
+                                    <input type="password" class="form-control" id="inputPassword5" autocomplete="off" />
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword6">Confirm Password</label>
-                                    <input type="password" class="form-control" id="inputPassword6" />
+                                    <input type="password" class="form-control" id="inputPassword6" autocomplete="off" />
                                 </div>
                             </div>
                             <br>
@@ -146,16 +146,16 @@
                             <form>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <input type="text" id="firstname" class="form-control" placeholder="First name" required/>
+                                        <input type="text" id="firstname_bnk" class="form-control" placeholder="First name" required/>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="text" id="lastname" class="form-control" placeholder="Last name" required/>
+                                        <input type="text" id="lastname_bnk" class="form-control" placeholder="Last name" required/>
                                     </div>
                                 </div>
                                 <input type="text" id="iban" class="form-control" placeholder="IBAN" required/>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <select id="country" name="country">
+                                        <select id="country" name="country" class="form-control">
                                             <option value="Afganistan">Afghanistan</option>
                                             <option value="Albania">Albania</option>
                                             <option value="Algeria">Algeria</option>
@@ -188,8 +188,16 @@
 
 <script>
 export default {
-  name: "Settings", 
-  
+  name: "Settings",
+  data (){
+    return {
+      first_name: 'Jhon',
+      last_name: 'Doe',
+      phone: '23564565545',
+      showModal: false,
+      purchases: [],
+    };
+  },
 }
 </script>
 
@@ -291,6 +299,13 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+.inlineInput{
+  display:inline-block !important;
+  margin-left: 10px;
+  width: 70% !important;
+}
+
 .form-group{
     padding: 10px;
 }

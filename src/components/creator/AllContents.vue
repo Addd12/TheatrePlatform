@@ -10,7 +10,7 @@
         <div class="card">
           <div class="card-body">
             <div class="overlayAlbumstyle">
-              <img :src="album.imgsrc" class="img-thumbnail" alt="Cinque Terre">
+              <img :src="album.imgsrc" class="img-thumbnail" alt="Cinque Terre" @click="goToDetails">
               <span class="albumTitle-style">{{ album.title }}</span><br>
 
               <div class="justify-content-center contentDetails-style">
@@ -25,7 +25,9 @@
                   <ul class="dropdown-menu">
                     <a href="#"><i class="fas fa-link"></i> Copy Link</a>
                     <hr style="margin:0px;">
-                    <a href="#"><i class="far fa-edit"></i> Edit</a>
+                    <a href="#" @click="goToEdit"><i class="far fa-edit"></i> Edit</a>
+                    <!-- <button class="far fa-edit" @click="goToEdit">Edit</button> -->
+                    <!-- <router-link :to="{name: 'crInvoice'}" @click="closeUsermenu"><i class="fas fa-file-invoice"></i>  Invoice</router-link> -->
                     <hr style="margin:0px;">
                     <a href="#"><i class="far fa-trash-alt"></i> Delete</a>
                   </ul>
@@ -96,10 +98,24 @@ export default {
     this.albumModel.push(testAlbum2);
     this.albumModel.push(testAlbum3);
   },
+   methods:{
+   goToEdit(){
+   this.$router.push('../modules/editalbum'); 
+      },
+
+   goToDetails(){
+    this.$router.push('../modules/detailsPage'); 
+   }
+  }
 }
 </script>
 
 <style scoped>
+
+.img-thumbnail{
+  cursor: pointer;
+}
+
 .card{
   border: 0px;
 

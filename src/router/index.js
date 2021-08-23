@@ -77,6 +77,16 @@ const routes = [
       },
 
       {
+        path:'detailspage',
+        name: 'crDetils',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "AddContent" */ '../components/creator/modules/detailsPage.vue')
+
+      },
+
+      {
         path:'verification',
         name: 'crVerification',
         // route level code-splitting

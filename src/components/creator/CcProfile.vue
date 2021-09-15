@@ -43,7 +43,7 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
                 <div class="container-fluid">
-                    <div class="row py-1 mx-auto">
+                    <div class="row py-1 mx-auto text-center">
                         <div class="col-sm-6 col-md-3 px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
                             <div class="icons">
                                 <div class="actions">
@@ -111,13 +111,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row py-2 mx-auto">
+                    <div class="row py-2 mx-auto text-center">
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
-                    <div class="row py-2 mx-auto">
+                    <div class="row py-2 mx-auto text-center">
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
@@ -127,13 +127,13 @@
             </div>
             <div class="tab-pane fade" id="albums" role="tabpanel" aria-labelledby="albums-tab">
                 <div class="container-fluid">
-                    <div class="row py-2 mx-auto">
+                    <div class="row py-2 mx-auto text-center">
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
-                    <div class="row py-2 mx-auto">
+                    <div class="row py-2 mx-auto text-center">
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                         <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
@@ -203,7 +203,7 @@
     bottom: 50%;
     right: 35%;
 }
-.col-sm:hover .icons {
+.col-sm-6:hover .icons {
     opacity: 1;
     transition: .5s ease;
 }

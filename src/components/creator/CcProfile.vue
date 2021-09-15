@@ -8,43 +8,43 @@
                 <i class="bi bi-three-dots fa-lg"></i>
             </div>
         </div>
-        <div class="row pt-4 px-5 ml-3">
-            <h4>Ada Sulaj <i class="fa fa-check" aria-hidden="true"></i></h4>
-            <div class="ml-auto justify-content-end text-center" style="width:250px">
-                <ul class="list-inline mb-0">
-                    <li class="px-1 list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">21</h5><small class="text-muted">Posts</small>
+        <div class="row mx-2 mt-5 user-name">
+            <h4 class="col-xs-6">Ada Sulaj<i class="fa fa-check ml-1" aria-hidden="true"></i></h4>
+            <div class="col-xs-6 ml-auto text-center">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold d-block">21</h5><small class="text-muted">Posts</small>
                     </li>
-                    <li class="px-1 list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">75</h5><small class="text-muted">Followers</small>
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold d-block">75</h5><small class="text-muted">Followers</small>
                     </li>
-                    <li class="px-1 list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">30</h5><small class="text-muted">Following</small>
+                    <li class="list-inline-item">
+                        <h5 class="font-weight-bold d-block">30</h5><small class="text-muted">Following</small>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="row pt-2">
+        <div class="row pt-2 m-2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam aspernatur, a, debitis vitae voluptatum hic 
             recusandae eum ex odit nesciunt sapiente quae ipsa eveniet sint, quibusdam similique nemo praesentium! Aspernatur 
             voluptas placeat a ratione, cumque, vitae quas quae minus odit, repudiandae exercitationem reiciendis velit quos et 
             consequuntur saepe commodi debitis?</p>
         </div>
         <div class="tab" role="tabpanel">
-            <ul class="nav nav-tabs justify-content-center" id="profileTabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active mr-5" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true"><i class="tabIcon bi bi-card-image fa-2x"></i></a>
+            <ul class="nav nav-tabs justify-content-center row text-center" id="profileTabs" role="tablist">
+                <li class="nav-item col-xs-6">
+                    <a class="nav-link active" id="posts-tab" data-toggle="tab" href="#posts" role="tab" aria-controls="posts" aria-selected="true"><i class="tabIcon bi bi-card-image fa-2x"></i></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link ml-5" id="albums-tab" data-toggle="tab" href="#albums" role="tab" aria-controls="albums" aria-selected="false"><i class="tabIcon bi bi-images fa-2x"></i></a>
+                <li class="nav-item col-xs-6">
+                    <a class="nav-link" id="albums-tab" data-toggle="tab" href="#albums" role="tab" aria-controls="albums" aria-selected="false"><i class="tabIcon bi bi-images fa-2x"></i></a>
                 </li>
             </ul>
         </div>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="posts" role="tabpanel" aria-labelledby="posts-tab">
                 <div class="container-fluid">
-                    <div class="row py-1">
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
+                    <div class="row py-1 mx-auto">
+                        <div class="col-sm-6 col-md-3 px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
                             <div class="icons">
                                 <div class="actions">
                                     <i class="bi bi-trash fa-lg px-1"></i>
@@ -60,7 +60,7 @@
                                     atque. Voluptas cupiditate deserunt quidem nobis dolorem voluptatibus!</p>
                             </div>
                         </div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
+                        <div class="col-sm-6 col-md-3 px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
                             <div class="icons">
                                 <div class="actions">
                                     <i class="bi bi-trash fa-lg px-1"></i>
@@ -76,7 +76,8 @@
                                     atque. Voluptas cupiditate deserunt quidem nobis dolorem voluptatibus!</p>
                             </div>
                         </div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
+                        <div class="col-sm-6 col-md-3 px-2">
+                            <img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
                             <div class="icons">
                                 <div class="actions">
                                     <i class="bi bi-trash fa-lg px-1"></i>
@@ -92,7 +93,7 @@
                                     atque. Voluptas cupiditate deserunt quidem nobis dolorem voluptatibus!</p>
                             </div>
                         </div>
-                        <div class="col-sm px-2">
+                        <div class="col-sm-6 col-md-3 px-2">
                             <img id="imgPost" src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm">
                             <div class="icons">
                                 <div class="actions">
@@ -110,33 +111,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row py-2">
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                    <div class="row py-2 mx-auto">
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
-                    <div class="row py-2">
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                    <div class="row py-2 mx-auto">
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="albums" role="tabpanel" aria-labelledby="albums-tab">
                 <div class="container-fluid">
-                    <div class="row py-2">
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                    <div class="row py-2 mx-auto">
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
-                    <div class="row py-2">
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
-                        <div class="col-sm px-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                    <div class="row py-2 mx-auto">
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
+                        <div class="col-sm-12 col-md-3 p-2"><img src="https://via.placeholder.com/300" class="image img-fluid rounded-top shadow-sm"></div>
                     </div>
                 </div>
             </div>
@@ -153,17 +154,22 @@
 
 <style scoped>
 .profile-head {
-    transform: translateY(5rem)
+    transform: translateY(7em);
 }
 .cover {
     position: relative;
-    height: 230px;
+    height: 200px;
     background-image: url(https://via.placeholder.com/500);
     background-size: cover;
     background-repeat: no-repeat
 }
+
+.user-name {
+    margin-top: 5em !important;
+}
+
 .description p {
-    width: 250px;
+    width: auto;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -172,7 +178,7 @@
 .dots {
     position: absolute;
     top: 12%;
-    left: 95%;
+    right: 5%;
 }
 .col-sm:hover .image {
     opacity: 0.5;

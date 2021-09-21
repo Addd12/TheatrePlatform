@@ -1,8 +1,29 @@
 <template>
   <div>
+        
+                   <div class="input-group rounded navbar navbar-light bg-white fixed-top shadow-sm" id="top">
+                    <img src="https://via.placeholder.com/30" class="img-fluid rounded ml-3 mr-1">
+                      <input type="search" class="form-control rounded ml-5" placeholder="search" aria-label="Search"
+                        aria-describedby="search-addon" />
+                      <span class="input-group-text border-0 bg-white ml-2 mr-0" id="search-addon">
+                        <i class="fas fa-search"></i>
+                      </span>
+                      <div class="dropdown">
+                          <button class="btn btn-secondary bg-white text-dark border-0 ml-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1em;">
+                             Ada
+                            <img src="https://via.placeholder.com/25" class="img-fluid rounded ml-1">
+                        </button>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                          </div>
+                        </div>
+                    </div>
+    
 
-    <div id="nav">
-      <nav class="navbar navbar-light bg-white fixed-top shadow-sm justify-content-center">
+    <div>
+      <nav class="navbar navbar-light bg-white fixed-bottom shadow-sm justify-content-center">
         <div class="container">
           <router-link :to="{ name: 'CrDashBoard' }" class="navbar-toggler shadow-sm" @click="closeUsermenu()" exact>
               <i class="fas fa-home"></i>
@@ -83,7 +104,11 @@ export default {
 
 <style scoped>
 #nav{
-  padding-bottom: 70px;
+  margin-bottom: 30px;
+}
+
+#top{
+  z-index: 1;
 }
 .center{
   display: block;
@@ -91,6 +116,8 @@ export default {
   margin-right: auto;
   text-align: center;
 }
+
+
 
 
 .navbar .navbar-toggler{
@@ -131,7 +158,7 @@ export default {
   width: 0%;
   z-index: 20;
   position: fixed;
-  top: 50px;
+  top: 0px;
   right: 0;
   /* background: rgb(236, 239, 241); */
   background: rgb(255, 255, 255);

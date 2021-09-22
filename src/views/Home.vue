@@ -2,7 +2,7 @@
   <div>
 
     <div id="nav">
-      <nav class="navbar navbar-light bg-white fixed-top shadow-sm justify-content-center">
+      <nav class="navbar navbar-light bg-white fixed-bottom shadow-sm justify-content-center">
         <div class="container">
           <router-link :to="{ name: 'CrDashBoard' }" class="navbar-toggler shadow-sm" @click="closeUsermenu()" exact>
               <i class="fas fa-home"></i>
@@ -13,7 +13,8 @@
           <router-link :to="{ name: 'AddContent' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-plus"></i></router-link>
           <router-link :to="{ name: 'AllContents' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="far fa-images"></i></router-link>
           <router-link :to="{ name: 'earningsecreter' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-euro-sign"></i></router-link>
-          <a @click="openUsermenu()" class="navbar-toggler shadow-sm"><i class="far fa-user"></i></a>
+          <router-link :to="{name: 'crProfile'}" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="far fa-user"></i></router-link>
+          <a @click="openUsermenu()" class="navbar-toggler shadow-sm"><i class="fas fa-bars"></i></a>
 
         </div>
       </nav>
@@ -28,7 +29,7 @@
       </div>
       <div class="container right-menu-btn">
         <hr>
-        <router-link :to="{name: 'crProfile'}" @click="closeUsermenu"><i class="far fa-id-badge"></i> Profile</router-link>
+        <!-- <router-link :to="{name: 'crProfile'}" @click="closeUsermenu"><i class="far fa-id-badge"></i> Profile</router-link> -->
         <hr>
         <a href="#"><i class="fas fa-link"></i> Copy Profile Link</a>
         <hr>
@@ -82,6 +83,14 @@ export default {
 </script>
 
 <style scoped>
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 #nav{
   padding-bottom: 70px;
 }
@@ -131,7 +140,7 @@ export default {
   width: 0%;
   z-index: 20;
   position: fixed;
-  top: 50px;
+  bottom: 50px;
   right: 0;
   /* background: rgb(236, 239, 241); */
   background: rgb(255, 255, 255);

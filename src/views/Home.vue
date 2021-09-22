@@ -1,21 +1,20 @@
 <template>
   <div>
         
-                   <div class="input-group rounded navbar navbar-light bg-white fixed-top shadow-sm" id="top">
+                   <div class="input-group rounded navbar navbar-light bg-white sticky-top mb-2 shadow-sm" id="top">
                     <img src="https://via.placeholder.com/30" class="img-fluid rounded ml-3 mr-1">
-                      <input type="search" class="form-control rounded ml-5" placeholder="search" aria-label="Search"
-                        aria-describedby="search-addon" />
-                      <span class="input-group-text border-0 bg-white ml-2 mr-0" id="search-addon">
-                        <i class="fas fa-search"></i>
+
+                      <span class="input-group-text border-0 bg-white ml-2" id="search-addon">
+                        <input type="search" class="form-control rounded ml-2" aria-label="Search"
+                        aria-describedby="search-addon"/>
+                        <div class="input-group-addon"><i class="fas fa-search"></i></div>
                       </span>
                       <div class="dropdown">
                           <button class="btn btn-secondary bg-white text-dark border-0 ml-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1em;">
                              Ada
-                            <img src="https://via.placeholder.com/25" class="img-fluid rounded ml-1">
+                            <img src="https://via.placeholder.com/20" class="img-fluid rounded">
                         </button>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Profile</a>
-                            <a class="dropdown-item" href="#">Settings</a>
+                          <div class="dropdown-menu" style="width:5px !important;" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Logout</a>
                           </div>
                         </div>
@@ -26,14 +25,14 @@
       <nav class="navbar navbar-light bg-white fixed-bottom shadow-sm justify-content-center">
         <div class="container">
           <router-link :to="{ name: 'CrDashBoard' }" class="navbar-toggler shadow-sm" @click="closeUsermenu()" exact>
-              <i class="fas fa-home"></i>
+              <i class="far fa-chart-bar"></i>
 <!--            <img src="{{ asset('modules/staticimgs/logo.png') }}" alt="Home" style="width:40px;">-->
 <!--              actual logo-->
 <!--            <span class="createricon createrIcon-createrNew" style="margin: 0px 5px;"></span>-->
           </router-link>
-          <router-link :to="{ name: 'AddContent' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-plus"></i></router-link>
-          <router-link :to="{ name: 'AllContents' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="far fa-images"></i></router-link>
-          <router-link :to="{ name: 'earningsecreter' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-euro-sign"></i></router-link>
+          <router-link :to="{ name: 'AddContent' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-search"></i></router-link>
+          <router-link :to="{ name: 'AllContents' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="fas fa-plus"></i></router-link>
+          <router-link :to="{ name: 'earningsecreter' }" class="navbar-toggler shadow-sm" @click="closeUsermenu"><i class="far fa-heart"></i></router-link>
           <a @click="openUsermenu()" class="navbar-toggler shadow-sm"><i class="far fa-user"></i></a>
 
         </div>
@@ -117,8 +116,29 @@ export default {
   text-align: center;
 }
 
+.dropdown-menu {
+    min-width: 7em !important;
+    margin-left: -1em !important;
+}
 
 
+.input-group-text{
+  position:relative;
+}
+
+.input-group-addon{
+  position: absolute;
+  left: 30px;
+  opacity: .7;
+}
+
+.form-control:focus ~ .input-group-addon{
+  opacity: 0;
+}
+
+.form-control{
+  max-width: 130px;
+}
 
 .navbar .navbar-toggler{
   font-size: x-large;
@@ -162,7 +182,7 @@ export default {
   right: 0;
   /* background: rgb(236, 239, 241); */
   background: rgb(255, 255, 255);
-  transition: 0.5s;
+  transition: 0.3s;
   color: white;
   text-align: left;
   box-shadow: 0px 0px 15px 1px rgba(98, 0, 255, 0.3);

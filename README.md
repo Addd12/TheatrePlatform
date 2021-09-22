@@ -16,15 +16,11 @@ sudo apt-get install npm
 ```bash
 git clone https://github.com/Extramus/DMarketing-web.git
 ```
-3. Go to project directory
-```bash
-cd DMarketing-web
-```
-4. Update and install node modules
+3. Update and install node modules
 ```bash
 npm install
 ```
-5. Run local server in development mood
+4. Run local server in development mood
 ```bash
 npm run serve
 ```

@@ -14,7 +14,7 @@ sudo apt-get install npm
 ```
 2. Clone from github
 ```bash
-git clone https://github.com/Extramus/DMarketing-web.git
+git clone https://github.com/Extramus-Dev/TheatrePlatform.git
 ```
 3. Update and install node modules
 ```bash
